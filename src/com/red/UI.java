@@ -35,8 +35,8 @@ public class UI {
 		System.out.println("3: Cập nhật.");
 		System.out.println("4: Xóa.");
 		System.out.println("5: Tìm kiếm.");
-		System.out.println("6: Đọc từ app.file.");
-		System.out.println("7: Ghi vào app.file.");
+		System.out.println("6: Đọc từ File.");
+		System.out.println("7: Ghi vào File.");
 		System.out.println("8: Thoát.");
 		System.out.print("Chọn chức năng: ");
 
@@ -346,9 +346,9 @@ public class UI {
 	}
 
 	private void readFile(){
-		System.out.println("\n------ Đọc từ app.file ------");
+		System.out.println("\n------ Đọc từ File ------");
 
-		System.out.print("Nhập app.file muốn đọc: ");
+		System.out.print("Nhập File muốn đọc: ");
 		String file = scanner.nextLine();
 
 		ReadContactsFile readContactsFile = new ReadContactsFile(file);
@@ -365,7 +365,7 @@ public class UI {
 					System.out.println("\n------ Chọn ------");
 					System.out.println("1: Thêm vào danh bạ.");
 					System.out.println("2: Xem.");
-					System.out.println("3: Đọc từ app.file.");
+					System.out.println("3: Đọc từ File.");
 					System.out.println("0: Menu.");
 					System.out.print("Nhập: ");
 					String select = scanner.nextLine();
@@ -395,7 +395,7 @@ public class UI {
 
 		if (size == 0){
 			System.out.println("\n------ Chọn ------");
-			System.out.println("1: Đọc từ app.file.");
+			System.out.println("1: Đọc từ File.");
 			System.out.println("0: Menu.");
 			System.out.print("Nhập: ");
 			String select = scanner.nextLine();
@@ -408,15 +408,15 @@ public class UI {
 	}
 
 	private void writeFile(){
-		System.out.println("\n------ Ghi vào app.file ------");
+		System.out.println("\n------ Ghi vào File ------");
 
-		System.out.print("Nhập app.file muốn ghi: ");
+		System.out.print("Nhập File muốn ghi: ");
 		String file = scanner.nextLine();
 
 		WriteContactsFile writeContactsFile = new WriteContactsFile(file);
 
 		if (phoneBook.size() == 0){
-			System.out.println("\nDanh bạ trống, không thể lưu app.file, ");
+			System.out.println("\nDanh bạ trống, không thể lưu File, ");
 		}else{
 			writeContactsFile.save();
 			System.out.println("\nLưu thành công.");

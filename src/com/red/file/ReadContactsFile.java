@@ -39,6 +39,7 @@ public class ReadContactsFile {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		isGetData = true;
 	}
 
 	public List<Contacts> getContacts(){
