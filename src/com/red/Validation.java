@@ -10,7 +10,7 @@ public class Validation {
 
 	private static final Pattern patternPhone = Pattern.compile("^0[0-9]{8,11}$");
 
-	private static final Pattern patternValid = Pattern.compile(",+");
+	private static final Pattern patternValid = Pattern.compile(",");
 
 	private Validation(){}
 
@@ -23,16 +23,16 @@ public class Validation {
 
 	public boolean validEmail(String email){
 		Matcher matcher = patternEmail.matcher(email);
-		return matcher.matches();
+		return matcher.find();
 	}
 
 	public boolean validPhone(String phone){
 		Matcher matcher = patternPhone.matcher(phone);
-		return matcher.matches();
+		return matcher.find();
 	}
 
 	public boolean validCheck(String text){
 		Matcher matcher = patternValid.matcher(text);
-		return !matcher.matches();
+		return !matcher.find();
 	}
 }
