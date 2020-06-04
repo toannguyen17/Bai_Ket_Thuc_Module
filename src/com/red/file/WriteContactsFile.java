@@ -21,6 +21,7 @@ public class WriteContactsFile {
 			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
 
 			bufferedWriter.write(title);
+			bufferedWriter.newLine();
 
 			for (Contacts contacts: lists){
 				bufferedWriter.write(contacts.getData());
